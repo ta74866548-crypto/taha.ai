@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lesson Summarizer | الملخص</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .summary-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .loading {
+            text-align: center;
+            color: #3498db;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 2rem 0;
+        }
+        #summaryContent {
+            display: none;
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-right: 4px solid #3498db;
+            line-height: 1.8;
+            white-space: pre-wrap; /* للحفاظ على تنسيق الأسطر */
+            font-size: 1.1rem;
+        }
+        .actions {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            display: none; /* مخفي لحين ظهور الملخص */
+        }
+        .btn-secondary {
+            background-color: #95a5a6;
+        }
+        .btn-secondary:hover {
+            background-color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">مُلخص الدروس الذكي 🤖</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="upload.html">رفع درس جديد</a></li>
+                <li><a href="lessons.html">دروسي المحفوظة</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="summary-container">
+            <h2>📝 ملخص الدرس</h2>
+            
+            <div id="loading" class="loading">
+                جاري تحليل الملف وتوليد الملخص بالذكاء الاصطناعي... ⏳
+            </div>
+
+            <div id="summaryContent"></div>
+
+            <div id="actions" class="actions">
+                <a href="questions.html" class="btn">اختبر نفسك (كويز)</a>
+                <a href="chat.html" class="btn btn-secondary">اسأل الـ AI عن الدرس</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/summary.js"></script>
+</body>
+</html>
